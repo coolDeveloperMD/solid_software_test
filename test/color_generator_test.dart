@@ -7,17 +7,17 @@ import 'package:solid_software_test/presentation/utils/exports.dart';
 void main() {
   group('Color Generator', () {
     test('Generate Random Color', () {
-      final RandomColorGenerator colorGenerator = RandomColorGenerator();
+      final RandomColorGenerator _colorGenerator = RandomColorGenerator();
       // ensure color generator object is not null
-      expect(colorGenerator, isNotNull);
+      expect(_colorGenerator, isNotNull);
 
-      colorGenerator.generateBackgroundColor();
-      colorGenerator.generateTextColor(
-        color: colorGenerator.getBackgroundColor(),
+      _colorGenerator.generateBackgroundColor();
+      _colorGenerator.generateTextColor(
+        color: _colorGenerator.getBackgroundColor(),
       );
 
-      final Color backgroundColor = colorGenerator.getBackgroundColor();
-      final Color textColor = colorGenerator.getTextColor();
+      final Color backgroundColor = _colorGenerator.getBackgroundColor();
+      final Color textColor = _colorGenerator.getTextColor();
 
       // ensure the generated background color
       // is an instance of background color

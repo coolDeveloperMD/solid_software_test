@@ -20,7 +20,7 @@ class HomePage extends StatefulWidget {
 
 /// This state of stateful home page
 class _HomePageState extends State<HomePage> {
-  RandomColorGenerator colorGenerator = RandomColorGenerator();
+  final RandomColorGenerator _colorGenerator = RandomColorGenerator();
 
   @override
   void initState() {
@@ -30,9 +30,9 @@ class _HomePageState extends State<HomePage> {
   void generateRandomColor() {
     if (mounted) {
       setState(() {
-        colorGenerator.generateBackgroundColor();
-        colorGenerator.generateTextColor(
-          color: colorGenerator.getBackgroundColor(),
+        _colorGenerator.generateBackgroundColor();
+        _colorGenerator.generateTextColor(
+          color: _colorGenerator.getBackgroundColor(),
         );
       });
     }
@@ -50,12 +50,12 @@ class _HomePageState extends State<HomePage> {
           onTap: () => generateRandomColor(),
           child: AnimatedContainer(
             duration: const Duration(milliseconds: 1000),
-            color: colorGenerator.getBackgroundColor(),
+            color: _colorGenerator.getBackgroundColor(),
             child: Center(
               child: Text(
                 textHelloThere,
                 style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                      color: colorGenerator.getTextColor(),
+                      color: _colorGenerator.getTextColor(),
                       fontWeight: FontWeight.bold,
                     ),
               ),

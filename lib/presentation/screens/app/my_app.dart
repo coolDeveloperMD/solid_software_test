@@ -3,6 +3,8 @@ import 'package:solid_software_test/presentation/utils/exports.dart';
 
 /// This is our root widget where we give material themes
 class MyApp extends StatelessWidget {
+  /// constant default MyApp constructor
+  const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
