@@ -1,4 +1,4 @@
-import 'package:solid_software_test/presentation/utils/exports.dart';
+import 'package:solid_software_test/shared/exports.dart';
 
 /// abstract class of text color generator
 abstract class TextColorGenerator {

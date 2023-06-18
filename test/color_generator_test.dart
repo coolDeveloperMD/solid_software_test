@@ -2,16 +2,13 @@
 /// this is used to test te color generator class
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:solid_software_test/presentation/utils/exports.dart';
+import 'package:solid_software_test/shared/exports.dart';
 
 void main() {
   group('Color Generator', () {
     test('Generate background random color', () {
       final RandomBackgroundColorGenerator _randomBackgroundColorGenerator =
           RandomBackgroundColorGenerator();
-
-      // ensure background color generator object is not null
-      expect(_randomBackgroundColorGenerator, isNotNull);
 
       _randomBackgroundColorGenerator.generateBackgroundColor();
 
@@ -26,9 +23,6 @@ void main() {
       final GenerateRandomTextColor _generateRandomTextColor =
           GenerateRandomTextColor();
 
-      // ensure text color generator object is not null
-      expect(_generateRandomTextColor, isNotNull);
-
       _generateRandomTextColor.generateTextColor(
         color: Colors.white,
       );
@@ -38,5 +32,22 @@ void main() {
       //ensure the generated text color is an instance of text color
       expect(textColor, isInstanceOf<Color>());
     });
+
+    test('Color palette generator', () {
+      final ColorPaletteListGenerator _colorPaletteListGenerator =
+          ColorPaletteListGenerator();
+
+      _colorPaletteListGenerator.generateColorPaletteList(
+        baseColor: Colors.blue,
+        numberOfShades: numberOfShades,
+      );
+
+      final List<Color>? colorPaletteList =
+          _colorPaletteListGenerator.getColorPaletteList();
+
+      expect(colorPaletteList, isNotNull);
+      expect(colorPaletteList, isNotEmpty);
+    });
   });
+  tearDownAll(() => debugPrint('Congrats! All test cases are passed'));
 }

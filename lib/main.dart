@@ -1,5 +1,5 @@
-import 'package:solid_software_test/presentation/utils/exports.dart';
+import 'package:solid_software_test/shared/exports.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const App());
 }
