@@ -10,3 +10,10 @@
 2. Fill Github form with your new repo name and press "Create repository from template"
 3. Wait for it to be created and set up action is complete. In a couple of minutes, you'll see the flutter project created in your repo once Github Actions are complete.
 4. Clone and code.
+
+
+# New Feature
+- Added a random color generator
+- Added color palette generator from base color
+- Added animation when color changes
+- Added text color based on background color if background color is light, then the text color will be black otherwise it will be white color
