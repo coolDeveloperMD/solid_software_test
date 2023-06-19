@@ -1,4 +1,3 @@
-
 import 'package:solid_software_test/shared/exports.dart';
 
 /// This is our root widget where we give material themes

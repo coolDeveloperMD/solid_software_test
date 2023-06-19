@@ -1,4 +1,3 @@
-
 import 'package:solid_software_test/shared/exports.dart';
 
 /// abstract class of background color generator class

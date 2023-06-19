@@ -1,5 +1,4 @@
 export 'dart:math';
-
 export 'package:flutter/material.dart';
 export 'package:solid_software_test/modules/app/app.dart';
 export 'package:solid_software_test/modules/color_palette_list/view/color_palette_list_page.dart';
